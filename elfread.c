@@ -177,14 +177,13 @@ int elfread(char *file, char *imem, char *dmem, int *isize, int *dsize)
 {
     FILE *fp;
     char elf_header[EI_NIDENT];
-    int size;
 
     if ((fp = fopen(file, "r")) == NULL) {
         printf("Can not open file %s\n", file);
         return 0;
     }
 
-    if (!(size = fread(&elf_header, sizeof(elf_header), 1, fp))) {
+    if (!fread(&elf_header, sizeof(elf_header), 1, fp)) {
         printf("Can not read file %s\n", file);
         fclose(fp);
         return 0;
