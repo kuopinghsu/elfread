@@ -1,7 +1,7 @@
 CFLAGS   = -O3 -g -Wall
-SRC      = elfreader.c
+SRC      = elfread.c
 OBJECTS  = $(SRC:.c=.o)
-TARGET   = elfreader
+TARGET   = elfread
 
 .SUFFIXS: .c .o
 
