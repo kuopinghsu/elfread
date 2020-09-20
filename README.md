@@ -14,4 +14,4 @@ elfread is used for <A Href="https://github.com/kuopinghsu/simple-riscv">simple-
 
 ## License
 
-GPL License
+MIT License
